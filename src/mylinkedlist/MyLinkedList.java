@@ -136,22 +136,6 @@ public class MyLinkedList {
 
 // BTVN2: Viết cho anh hàm sort()
 // BTVN3: 
-    public void sort() {
-        if (head == null) {
-            return;
-        }
-
-        for (Node i = head; i != null; i = i.next) {
-            for (Node j = i.next; j != null; j = j.next) {
-                if (i.data > j.data) {
-                    int temp = i.data;
-                    i.data = j.data;
-                    j.data = temp;
-                }
-            }
-        }
-    }
-
     public static void main(String[] args) {
        MyLinkedList linkedList = new MyLinkedList();
        linkedList.addFirst(1);
@@ -163,8 +147,6 @@ public class MyLinkedList {
        linkedList.addLast(3);
         //3 - 2 - 1 - 1->2->3
         linkedList.delete(4);
-        linkedList.display();
-        linkedList.sort();
         linkedList.display();
         
     }
